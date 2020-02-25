@@ -225,8 +225,9 @@ public class WriteTest {
             inputStream = FileUtils.openInputStream(new File(imagePath));
             imageData.setInputStream(inputStream);
             imageData.setUrl(new URL(
-                "https://raw.githubusercontent.com/alibaba/easyexcel/master/src/test/resources/converter/img.jpg"));
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582604687061&di=7ca6a31ddc561acec69fc00ed49d1323&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201606%2F19%2F20160619175121_iyPEw.thumb.700_0.jpeg"));
             EasyExcel.write(fileName, ImageData.class).sheet().doWrite(list);
+            System.out.println(fileName);
         } finally {
             if (inputStream != null) {
                 inputStream.close();
